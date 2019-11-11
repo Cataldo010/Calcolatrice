@@ -1,0 +1,142 @@
+<html>
+<meta charset="US-ASCII">
+<head>
+<style>
+body{
+    background-image:linear-gradient(120deg, red,blue);
+}
+table{
+    border: 10px solid black;
+    margin:0px;
+    padding:0px;
+}
+DIV{
+    background-color: white;
+    width: 1000px;
+    height:1000px;
+    box-sizing: border-box;
+    Border-radius:40px;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%,-50%);
+}
+form{
+    padding:110px 70px;
+    font-size: 70px;
+}
+.button {
+    font-size: 60px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    width: 150px;
+    height: 70px;
+    background-color: white;
+    border:1px solid black;
+    padding: 7px 10px;
+    text-align: center;
+    display: inline-block;
+    Border-radius:20px;
+
+    }
+
+.button:hover {
+  background-image:linear-gradient(120deg, red,blue);
+  color: white;
+}
+
+table, td {
+  border: 10px solid black;
+}
+.text {
+    font-size: 70px;
+    width: 650px;
+    height: 100px;
+    Border-radius:20px;
+    border:1px solid black;
+    font-family:monospace;
+}
+p{
+    font-family:monospace;;
+}
+p1{
+    font-family:monospace;;
+    font-size:30px;
+}
+</style>
+<script>
+function ins(num){
+ form.text.value=form.text.value+num
+}
+
+function SOMMA(){
+var exp=form.text.value;
+if(exp)
+ {
+  form.text.value=eval(exp)
+ }
+}
+
+function c(){
+ form.text.value="";
+}
+
+function indietro(){
+    var exp=form.text.value;
+    form.text.value=exp.substring(0,exp.length-1);
+
+}
+</script>
+</head>
+
+<body><center><DIV>
+<form name=form>
+<p>Calcolatrice</p>
+<input class=text type=text name=text>
+<br>
+
+<tabel>
+<tr>
+<td><input class=button type="Button" value="C" name=C onclick=c()></td>
+<td><input class=button type="Button" value="Back" name=Back onclick=indietro()></td>
+<td><input class=button type="Button" value="+" name=+ onclick=ins("+")></td>
+<td><input class=button type="Button" value="-" name=- onclick=ins("-")></td>
+<BR>
+</tr>
+<tr>
+<td><input class=button type="Button" value="7" name=7 onclick=ins(7)></td>
+<td><input class=button type="Button" value="8" name=8 onclick=ins(8)></td>
+<td><input class=button type="Button" value="9" name=9 onclick=ins(9)></td>
+<td><input class=button type="Button" value="*" name=* onclick=ins("*")></td>
+
+
+<BR>
+</tr>
+<tr>
+<td><input class=button type="Button" value="4" name=4 onclick=ins(4)></td>
+<td><input class=button type="Button" value="5" name=5 onclick=ins(5)></td>
+<td><input class=button type="Button" value="6" name=6 onclick=ins(6)></td>
+<td><input class=button type="Button" value="/" name=/ onclick=ins("/")></td>
+
+<BR>
+</tr>
+<tr>
+<td><input class=button type="Button" value="1" name=1 onclick=ins(1)></td>
+<td><input class=button type="Button" value="2" name=2 onclick=ins(2)></td>
+<td><input class=button type="Button" value="3" name=3 onclick=ins(3)></td>
+<td rowspan="2"><input class="Button"  type="Button" value="=" name="=" onclick=SOMMA()></td>
+</td>
+<br>
+</tr>
+<tr>
+<td cellspan="2"><input class="Button" style="width: 50%" type="Button" value="0" name=. onclick=ins(0)></td>
+<td><input class=button type="Button" style="width: 25%" value="." name=. onclick=ins(".")></td>
+
+</tr>
+<BR>
+</tabel>
+<p1>creata da Cataldo Piccolomo</p1>
+</center>
+</DIV>
+</body>
+</html>
